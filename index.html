@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class=" scroll-smooth" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,159 +8,190 @@
     <title>English | জানালা</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-          .active {
-              border-radius: 4px;
-              border: 1px solid #422AD5;
-  
-              background: #422AD5;
-              color: white;
-          }
-      </style>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .active {
+            border-radius: 4px;
+            border: 1px solid #422AD5;
+
+            background: #422AD5;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
     <header class=" fixed top-0 w-full z-20">
-        <div id="nav" class="navbar bg-gray-200 shadow-sm px-12 hidden border-b-[1px]">
+        <div id="nav" class="navbar bg-gray-200 shadow-sm lg:px-12 px-6 hidden border-b-[1px]">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li> <a href="#faq" class="btn border-[#422AD5] border-2"><img
+                                    src="./assets/fa-circle-question.png" alt=""> FAQ</a></li>
+                       <li> <a href="#learn" class="btn border-[#422AD5] border-2"><img src="./assets/fa-book-open.png"
+                        alt=""> Learn</a></li>
+                        <li><a onclick="logout()" class="btn border-[#422AD5] border-2"><img
+                            src="./assets/fa-arrow-right-from-bracket.png" alt=""> Logout</a></li>
+                    </ul>
                 </div>
-               
-              </div>
-              <a class="btn btn-ghost text-xl"><h2>English</h2> <img src="./assets/logo.png" alt=""> <h2>জানালা</h2></a>
+                <a class="btn btn-ghost text-xl">
+                    <h2>English</h2> <img src="./assets/logo.png" alt="">
+                    <h2>জানালা</h2>
+                </a>
 
             </div>
             <div class="navbar-center hidden lg:flex">
             </div>
-            <div class="navbar-end gap-3">
-              <a href="#faq" class="btn border-[#422AD5] border-2"><img src="./assets/fa-circle-question.png" alt="">  FAQ</a>
-              <a href="#learn" class="btn border-[#422AD5] border-2"><img src="./assets/fa-book-open.png" alt="">  Learn</a>
-              <a onclick="logout()" class="btn border-[#422AD5] border-2"><img src="./assets/fa-arrow-right-from-bracket.png" alt="">  Logout</a>
+            <div class="navbar-end gap-3 hidden lg:flex">
+                <a href="#faq" class="btn border-[#422AD5] border-2"><img src="./assets/fa-circle-question.png" alt="">
+                    FAQ</a>
+                <a href="#learn" class="btn border-[#422AD5] border-2"><img src="./assets/fa-book-open.png" alt="">
+                    Learn</a>
+                <a onclick="logout()" class="btn border-[#422AD5] border-2"><img
+                        src="./assets/fa-arrow-right-from-bracket.png" alt=""> Logout</a>
 
             </div>
-          </div>
+        </div>
     </header>
 
 
 
-<main>
+    <main>
 
-    <!-- banner section -->
-   <section id="banner" class="">
-    <div class="flex justify-between items-center px-12">
-        <div><h2 class=" mb-3 font-bold text-4xl"> <span class="text-[#00BCFF]">English</span> is Easy!!</h2>
-            <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>
-                আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br>
-                যাবে অন্য একটি Level এ</p>
+        <!-- banner section -->
+        <section id="banner" class="">
+            <div class="flex lg:flex-row flex-col justify-between items-center lg:px-12 px-6 lg:mt-0 mt-8">
+                <div>
+                    <h2 class=" mb-3 font-bold text-4xl"> <span class="text-[#00BCFF]">English</span> is Easy!!</h2>
+                    <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>
+                        আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br>
+                        যাবে অন্য একটি Level এ</p>
 
-            <div class="mt-6">
-                <input id="1st-input" type="text" placeholder="Enter your Name" class="input input-neutral" />
-                <input id="2nd-input" type="password" placeholder="password(123456)" class="input input-neutral mt-3" /> <br>
-                <button id="get-started" class="btn btn-primary mt-3">Get Started</button>
+                    <div class="mt-6">
+                        <input id="1st-input" type="text" placeholder="Enter your Name" class="input input-neutral" />
+                        <input id="2nd-input" type="password" placeholder="password(123456)"
+                            class="input input-neutral mt-3" /> <br>
+                        <button id="get-started" class="btn btn-primary mt-3">Get Started</button>
+                    </div>
+                </div>
+
+
+
+
+                <div>
+                    <img class="w-[504px]" src="./assets/hero-student.png" alt="">
+                </div>
             </div>
-        </div>
+        </section>
 
 
-
-
-        <div>
-         <img class="w-[504px]" src="./assets/hero-student.png" alt="">
-        </div>
-    </div>
-   </section>
-
-
-   <!-- learn section -->
+        <!-- learn section -->
         <section id="learn" class="mt-40 scroll-mt-28 hidden">
-           <h2 class="py-8 text-5xl text-center font-bold"> <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
+            <h2 class="py-8 lg:text-5xl text-2xl text-center font-bold"> <span class="text-[#00BCFF]">Let's</span> Learn
+                Vocabularies</h2>
 
-            <div id="btn-show" class="flex justify-center items-center gap-4 mt-6">        
-    
-            </div>
-
-          <div class="bg-[#F8F8F8] h-full py-7 px-3 mt-8">
-            <div id="loading" class="flex flex-col items-center hidden">
-              <span class="loading loading-dots loading-lg"></span>
+            <div id="btn-show" class="flex flex-wrap justify-center items-center gap-4 mt-6">
 
             </div>
-            <div id="lession-show-section">
-              <div class="py-6">
-                  <h3 class="text-center text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</h3>
-                  <p class="py-4 text-center text-4xl">একটি Lesson Select করুন।</p>
-              </div>
-          </div>
-          </div>
+
+            <div class="bg-[#F8F8F8] h-full py-7 px-3 mt-8">
+                <div id="loading" class="flex flex-col items-center hidden">
+                    <span class="loading loading-dots loading-lg"></span>
+
+                </div>
+                <div id="lession-show-section">
+                    <div class="py-6">
+                        <h3 class="text-center text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</h3>
+                        <p class="py-4 text-center lg:text-4xl text-2xl">একটি Lesson Select করুন।</p>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
 
-    <!-- FAQ section -->
-    <section id="faq" class="mt-56 scroll-mt-56 hidden">
-        <h2 class="py-8 text-5xl text-center font-bold"> <span class="text-[#00BCFF]">Frequently</span> Asked Questions</h2>
+        <!-- FAQ section -->
+        <section id="faq" class="mt-56 scroll-mt-56 hidden">
+            <h2 class="py-8 lg:text-5xl text-2xl text-center font-bold"> <span class="text-[#00BCFF]">Frequently</span>
+                Asked Questions</h2>
 
 
-        <div class="mt-8 px-12">
-          <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
-              <input type="radio" name="my-accordion-3" checked="checked" />
-              <div class="collapse-title font-semibold">the difference between var, let, and const?</div>
-              <div class="collapse-content text-sm"><strong>var</strong> is function-scoped, allows re-declaration
-                  and re-assignment, and is hoisted with undefined. <br>
-                  <strong> let </strong>is block-scoped, does not allow re-declaration but allows re-assignment.
-                  <br>
-                  <strong>const</strong> is block-scoped, does not allow re-declaration or re-assignment, and its
-                  value remains constant.
-              </div>
-          </div>
-          <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
-              <input type="radio" name="my-accordion-3" />
-              <div class="collapse-title font-semibold">the difference between map(), forEach(), and filter()?
-              </div>
-              <div class="collapse-content text-sm">
+            <div class="mt-8 lg:px-12 px-6">
+                <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">the difference between var, let, and const?</div>
+                    <div class="collapse-content text-sm"><strong>var</strong> is function-scoped, allows re-declaration
+                        and re-assignment, and is hoisted with undefined. <br>
+                        <strong> let </strong>is block-scoped, does not allow re-declaration but allows re-assignment.
+                        <br>
+                        <strong>const</strong> is block-scoped, does not allow re-declaration or re-assignment, and its
+                        value remains constant.
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">the difference between map(), forEach(), and filter()?
+                    </div>
+                    <div class="collapse-content text-sm">
 
-                  <strong>map()</strong> returns a new array with modified elements without changing the original
-                  array. <br>
-                  <strong>forEach()</strong> executes a function for each element but does not return a new
-                  array. <br>
-                  <strong>filter()</strong> returns a new array with elements that meet a specific condition. <br>
+                        <strong>map()</strong> returns a new array with modified elements without changing the original
+                        array. <br>
+                        <strong>forEach()</strong> executes a function for each element but does not return a new
+                        array. <br>
+                        <strong>filter()</strong> returns a new array with elements that meet a specific condition. <br>
 
-              </div>
-          </div>
-          <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
-              <input type="radio" name="my-accordion-3" />
-              <div class="collapse-title font-semibold">explain arrow functions and how they are different from regular functions?</div>
-              <div class="collapse-content text-sm"><strong>Arrow functions</strong> use => for a shorter syntax, inherit this from the surrounding scope, support implicit <br> return, cannot be used as constructors, and lack the arguments object, unlike regular functions.</div>
-          </div>
-          <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
-              <input type="radio" name="my-accordion-3" />
-              <div class="collapse-title font-semibold"> how JavaScript Promises work?</div>
-              <div class="collapse-content text-sm"><strong>JavaScript Promises</strong> handle asynchronous operations. A Promise has three states: pending, resolved <br> (fulfilled), or rejected. It executes asynchronously and uses .then() for success and .catch() for errors.</div>
-          </div>
-          <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
-              <input type="radio" name="my-accordion-3" />
-              <div class="collapse-title font-semibold">how closures work in JavaScript?</div>
-              <div class="collapse-content text-sm"><strong>Closures</strong> in JavaScript occur when a function retains access to its lexical scope, even after the outer <br> function has finished executing. This allows the inner function to access variables from the outer <br> function, even after it's returned.</div>
-          </div>
-      </div>
-    </section>
+                    </div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">explain arrow functions and how they are different from
+                        regular functions?</div>
+                    <div class="collapse-content text-sm"><strong>Arrow functions</strong> use => for a shorter syntax,
+                        inherit this from the surrounding scope, support implicit <br> return, cannot be used as
+                        constructors, and lack the arguments object, unlike regular functions.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold"> how JavaScript Promises work?</div>
+                    <div class="collapse-content text-sm"><strong>JavaScript Promises</strong> handle asynchronous
+                        operations. A Promise has three states: pending, resolved <br> (fulfilled), or rejected. It
+                        executes asynchronously and uses .then() for success and .catch() for errors.</div>
+                </div>
+                <div class="collapse collapse-plus bg-gray-200 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">how closures work in JavaScript?</div>
+                    <div class="collapse-content text-sm"><strong>Closures</strong> in JavaScript occur when a function
+                        retains access to its lexical scope, even after the outer <br> function has finished executing.
+                        This allows the inner function to access variables from the outer <br> function, even after it's
+                        returned.</div>
+                </div>
+            </div>
+        </section>
 
 
-    <dialog id="my_modal_1" class="modal">
-      <div id="single-data-show" class="modal-box">
-      
-      
-      </div>
-    </dialog>
+        <dialog id="my_modal_1" class="modal">
+            <div id="single-data-show" class="modal-box">
 
 
-</main>
+            </div>
+        </dialog>
+
+
+    </main>
 
 
 
@@ -169,39 +201,46 @@
     <footer>
 
         <section class="mt-20 border-t py-8">
-            <div class="flex justify-between items-center gap-3 px-12">
+            <div class="flex lg:flex-row flex-col lg:justify-between  lg:items-center items-start gap-3 lg:px-12 px-6">
                 <div>
-                <div class="flex items-center gap-2 font-bold text-xl py-3"> <h2>English</h2> <img src="./assets/logo.png" alt=""> <h2>জানালা</h2>
-                
+                    <div class="flex items-center gap-2 font-bold text-xl py-3">
+                        <h2>English</h2> <img src="./assets/logo.png" alt="">
+                        <h2>জানালা</h2>
+
+                    </div>
+
+                    <h3 class="text-xl py-2">ইংরেজি শিখুন সহজে</h3>
+                    <h4>Providing ED-Tech Applications since 2025</h4>
+
                 </div>
-                    
-                <h3 class="text-xl py-2">ইংরেজি শিখুন সহজে</h3>
-                <h4>Providing ED-Tech Applications since 2025</h4>
-            
-            </div>
-               
 
 
 
-                <div>
+
+                <div class="lg:mt-0 mt-8">
 
                     <h3>FOLLOW US </h3>
 
-                    <div class="flex justify-center items-center gap-3 mt-4">
-                        <a href="https://www.facebook.com/nurjahanjamanjeri"target="_blank"><img src="./assets/fb-thumb.png" alt=""></a>
-                        <a href="https://www.youtube.com/channel/UCOA-f8J_uCIf9SjkiSpC0Ow"target="_blank"><img src="./assets/youtube-thumb.png" alt=""></a>
-                        <a href="https://www.instagram.com/nurjahanjamanjerin/"target="_blank"><img src="./assets/instagram-thumb.png" alt=""></a>
-                        <a href="https://github.com/jerinjamandev"target="_blank"><img src="./assets/github-thumb.png" alt=""></a>
+                    <div class="flex  justify-center items-center gap-3 mt-4">
+                        <a href="https://www.facebook.com/nurjahanjamanjeri" target="_blank"><img
+                                src="./assets/fb-thumb.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UCOA-f8J_uCIf9SjkiSpC0Ow" target="_blank"><img
+                                src="./assets/youtube-thumb.png" alt=""></a>
+                        <a href="https://www.instagram.com/nurjahanjamanjerin/" target="_blank"><img
+                                src="./assets/instagram-thumb.png" alt=""></a>
+                        <a href="https://github.com/jerinjamandev" target="_blank"><img src="./assets/github-thumb.png"
+                                alt=""></a>
 
                     </div>
                 </div>
             </div>
         </section>
     </footer>
-    
 
 
-  <script src="./script/display.js"></script>
-  <script src="./script/API.js"></script>
+
+    <script src="./script/display.js"></script>
+    <script src="./script/API.js"></script>
 </body>
+
 </html>

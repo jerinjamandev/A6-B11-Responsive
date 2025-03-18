@@ -54,13 +54,13 @@ const WordFetch=(levelId)=>{
 
 const dataShow=(words)=>{
     const lessionshowsection=document.getElementById('lession-show-section')
-    lessionshowsection.classList='grid grid-cols-3 gap-4'
+    lessionshowsection.classList='grid lg:grid-cols-3 grid-cols-1  gap-4'
     lessionshowsection.innerHTML=""
     if(words.length===0){
       lessionshowsection.classList.remove('grid')
       lessionshowsection.innerHTML=`<div class="flex flex-col items-center">
       <img src="./assets/alert-error.png" alt="">
-      <p>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <p class='lg:text-xl text-xs'>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
       <p class="text-2xl font-semibold py-2">নেক্সট Lesson এ যান</p>
       
   </div>`
@@ -68,7 +68,7 @@ const dataShow=(words)=>{
     words.forEach(word => {
         const lessionSection=document.createElement('div')
         lessionSection.innerHTML=`
-        <div class="card bg-base-100 card-lg shadow-sm h-[220px]">
+        <div class="card bg-base-100 card-lg shadow-sm lg:h-[220px] h-full">
         <div class="card-body py-4">
          <div class=" text-center">
             <h2 class="text-2xl font-bold py-3">${word.word}</h2>
@@ -134,7 +134,7 @@ const loppingfetchSingleData=(word)=>{
             </div>
             <div class="mt-3">
               <p class="font-semibold">সমার্থক শব্দ গুলো</p>
-              <div class="flex gap-2 mt-1">
+              <div class="flex flex-wrap gap-2 mt-1">
 
               ${word.synonyms?.map(sy => `<span class="btn">${sy}</span>`).join('')}
               
@@ -159,5 +159,7 @@ function pronounceWord(word) {
   window.speechSynthesis.speak(utterance);
 }
 vBtnFetch()
+
+
 
 
